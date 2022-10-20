@@ -16,10 +16,12 @@ const Container = styled.div`
   margin: 0 1.5rem;
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  clip-path: ${(props) => (props.expand ? "inset(0)" : "inset(0 88% 0 0)")};
+  transition: clip-path 1.5s ease-out;
+`;
 
 const LogoLink = styled.a`
-  transform: translate(0px, 0px);
   z-index: 9;
 `;
 
@@ -192,7 +194,7 @@ function NavBar() {
       )}
       <NavMenuContainer>
         <LogoLink href="/">
-          <Logo src={logo} />
+          <Logo src={logo} expand={expand} />
         </LogoLink>
         {expand ? (
           <CloseIcon style={menuIconStyles} onClick={toggleExpand} />
