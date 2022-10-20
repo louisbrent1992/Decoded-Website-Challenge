@@ -3,17 +3,16 @@ import styled from "styled-components";
 import largeArrows from "../largeArrows.svg";
 
 const Container = styled.div`
-  height: 30vh;
+  height: 27vh;
   text-align: start;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   margin: 0 1.5rem;
 `;
 
 const Header = styled.span`
-  color: white;
-  font-size: 35px;
+  color: #e2e8f0;
+  font-size: 32px;
 `;
 
 const ParagraphsContainer = styled.div`
@@ -21,18 +20,20 @@ const ParagraphsContainer = styled.div`
 `;
 
 const Paragraph = styled.p`
-  color: white;
+  color: #e2e8f0;
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  margin-top: 0;
 `;
 
 const DeclarativeContainer = styled.div`
+  padding-top: 1rem;
   display: flex;
   gap: 1rem;
 `;
 
 const Declarative = styled.span`
-  color: white;
+  color: #e2e8f0;
   font-size: 18px;
 `;
 

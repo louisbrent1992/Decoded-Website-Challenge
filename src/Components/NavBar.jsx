@@ -6,7 +6,7 @@ import { desktop } from "../_Responsive";
 import logo from "../logo.svg";
 
 const Container = styled.div`
-  height: 7vh;
+  height: 10vh;
   width: 100%;
   position: static;
   top: 0;
@@ -50,7 +50,7 @@ const NavLink = styled.a`
   gap: 1rem;
   text-decoration: none;
   font-weight: 200;
-  color: white;
+  color: #e2e8f0;
   font-size: 48px;
   animation: translate 1.5s ease-in reverse;
 
@@ -78,7 +78,7 @@ const NavLinkTwo = styled.a`
   gap: 1rem;
   text-decoration: none;
   font-weight: 200;
-  color: white;
+  color: #e2e8f0;
   font-size: 32px;
   animation: translate 1.7s ease reverse;
 
@@ -149,7 +149,7 @@ function NavBar() {
   const menuIconStyles = {
     cursor: "pointer",
     fontSize: "55px",
-    color: "white",
+    color: "#e2e8f0",
     marginRight: "2.5rem",
   };
 

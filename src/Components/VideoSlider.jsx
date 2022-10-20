@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { images, videos } from "../_Data";
+import { videos } from "../_Data";
 
 const Container = styled.div`
   height: 55vh;
@@ -8,7 +8,7 @@ const Container = styled.div`
 `;
 
 const VideoContainer = styled.div`
-  height: 45vh;
+  height: 50vh;
   width: 100%;
 `;
 
@@ -29,7 +29,7 @@ const Square = styled.div`
   width: 10px;
   background-color: black;
   margin: 0 5px 2px 5px;
-  color: ${(props) => (props.currentIndex === 0 ? "#b38cd8" : "#333533")};
+  color: ${(props) => (props.slideIndex === 0 ? "#b38cd8" : "#333533")};
   filter: ${(props) =>
     props.currentIndex === props.slideIndex
       ? "brightness(3)"
