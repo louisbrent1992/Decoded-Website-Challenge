@@ -20,6 +20,10 @@ const Logo = styled.img`
   clip-path: ${(props) => (props.expand ? "inset(0)" : "inset(0 88% 0 0)")};
   transition: clip-path 1.5s ease-out;
 
+  &:hover {
+    clip-path: inset(0);
+  }
+
   ${desktop({ clipPath: "inset(0)" })};
 `;
 
