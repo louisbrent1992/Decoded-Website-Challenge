@@ -3,6 +3,7 @@ import styled from "styled-components";
 import largeArrows from "../largeArrows.svg";
 
 const Container = styled.div`
+  height: 30vh;
   text-align: start;
   display: flex;
   flex-direction: column;
