@@ -19,18 +19,28 @@ const Container = styled.div`
 const Logo = styled.img`
   clip-path: ${(props) => (props.expand ? "inset(0)" : "inset(0 88% 0 0)")};
   transition: clip-path 1.5s ease-out;
+
+  ${desktop({ clipPath: "inset(0)" })};
 `;
 
 const LogoLink = styled.a`
   z-index: 9;
 `;
 
-const NavLinksContainer = styled.div`
-  gap: 1rem;
-  margin-right: 35px;
+const NavLinksDesktop = styled.div`
+  width: 100%;
   display: none;
+  ${desktop({
+    display: "flex",
+    justifyContent: "space-between",
+    marginRight: "50px",
+    zIndex: "1",
+  })};
+`;
 
-  ${desktop({ display: "flex", zIndex: "1" })};
+const NavLinksContainer = styled.div`
+  display: flex;
+  gap: 1rem;
 `;
 
 const NavLinksGroupOne = styled.div`
@@ -55,6 +65,8 @@ const NavLink = styled.a`
   color: #e2e8f0;
   font-size: 48px;
   animation: translate 1.5s ease-in reverse;
+
+  ${desktop({ fontSize: "32px" })}
 
   a:visited {
     text-decoration: none;
@@ -183,14 +195,19 @@ function NavBar() {
           </NavLinksGroupTwo>
         </NavExpanded>
       ) : (
-        <NavLinksContainer>
-          <NavLink href="about">About</NavLink>
-          <NavLink href="Work">Work</NavLink>
-          <NavLink href="people">People</NavLink>
-          <NavLink href="news">News</NavLink>
-          <NavLink href="culture">Culture & Careers</NavLink>
-          <NavLink href="contact">Contact</NavLink>
-        </NavLinksContainer>
+        <NavLinksDesktop>
+          <LogoLink href="/">
+            <Logo src={logo} expand={expand} />
+          </LogoLink>
+          <NavLinksContainer>
+            <NavLink href="about">About</NavLink>
+            <NavLink href="Work">Work</NavLink>
+            <NavLink href="people">People</NavLink>
+            <NavLink href="news">News</NavLink>
+            <NavLink href="culture">Culture & Careers</NavLink>
+            <NavLink href="contact">Contact</NavLink>
+          </NavLinksContainer>
+        </NavLinksDesktop>
       )}
       <NavMenuContainer>
         <LogoLink href="/">
