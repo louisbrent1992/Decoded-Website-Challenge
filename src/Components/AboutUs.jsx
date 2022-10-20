@@ -7,27 +7,22 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 `;
 
 const Header = styled.span`
   color: white;
   font-size: 35px;
-  margin: 0;
 `;
 
 const ParagraphsContainer = styled.div`
-  height: 20vh;
   overflow-y: scroll;
-  background: linear-gradient(to bottom, #3700c8, #0000051b);
-  margin-bottom: 1rem;
 `;
 
 const Paragraph = styled.p`
-  margin: 0;
-  padding-bottom: 20px;
   color: white;
   font-size: 16px;
+  padding-bottom: 10px;
 `;
 
 const DeclarativeContainer = styled.div`
@@ -58,7 +53,7 @@ function AboutUs() {
       </ParagraphsContainer>
       <DeclarativeContainer>
         <Declarative>See what we do</Declarative>
-        <Arrows src={largeArrows} />
+        <Arrows src={largeArrows} style={{ marginBottom: "1rem" }} />
       </DeclarativeContainer>
     </Container>
   );

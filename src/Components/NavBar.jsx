@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 `;
 
 const Logo = styled.img``;
@@ -103,12 +103,12 @@ const NavLinkTwo = styled.a`
 
 const NavLinkNumber = styled.span`
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 12px;
   color: #f358a1;
 `;
 const NavLinkNumberTwo = styled.span`
   font-size: 8px;
-  margin-top: 10px;
+  margin-top: 12px;
   color: #f358a1;
 `;
 
@@ -150,7 +150,7 @@ function NavBar() {
     cursor: "pointer",
     fontSize: "55px",
     color: "white",
-    marginRight: "1.5rem",
+    marginRight: "2.5rem",
   };
 
   return (
@@ -185,9 +185,9 @@ function NavBar() {
           <NavLink href="about">About</NavLink>
           <NavLink href="Work">Work</NavLink>
           <NavLink href="people">People</NavLink>
-          <NavLink href="about">About</NavLink>
-          <NavLink href="Work">Work</NavLink>
-          <NavLink href="people">People</NavLink>
+          <NavLink href="news">News</NavLink>
+          <NavLink href="culture">Culture & Careers</NavLink>
+          <NavLink href="contact">Contact</NavLink>
         </NavLinksContainer>
       )}
       <NavMenuContainer>

@@ -4,11 +4,11 @@ import { images, videos } from "../_Data";
 
 const Container = styled.div`
   height: 55vh;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 `;
 
 const VideoContainer = styled.div`
-  height: 50vh;
+  height: 45vh;
   width: 100%;
 `;
 
