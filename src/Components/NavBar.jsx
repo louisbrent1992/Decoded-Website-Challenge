@@ -17,14 +17,23 @@ const Container = styled.div`
 `;
 
 const Logo = styled.img`
-	z-index: 9;
 	clip-path: inset(0 88% 0 0);
-	transition: clip-path 1.5s ease-out;
+	transition: clip-path 1.5s ease;
+	@keyframes LogoAnimation {
+		0% {
+			clip-path: inset(0);
+		}
+		100% {
+			clip-path: inset(0 88% 0 0);
+		}
+	}
+	animation: LogoAnimation 4s ease-out;
 `;
 
 const LogoLink = styled.a`
 	&:hover ${Logo} {
 		clip-path: inset(0);
+		transition: clip-path 1.5s ease-in-out;
 	}
 `;
 
